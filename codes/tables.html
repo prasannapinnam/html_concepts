@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hotels list,phonenumbers</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid blue;
+        /*border collapse , collapses 2 lines of border to 1 line*/
+        /*border-collapse: collapse;*/
+        border-radius: 10px;
+        border-style: dashed;
+      }
+      th.highlo {
+        background-color: cornflowerblue;
+      }
+      /*on hovering mouse on that section colour changes*/
+      tr:hover {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table data can be anything links,video,image etc...-->
+    <!--width 100% means table fits page-->
+    <table style="height: 200px; width: 100%">
+      <caption>
+        hotels list
+      </caption>
+      <colgroup style="background-color: aquamarine">
+        <col span="2" />
+        <col style="background-color: burlywood; width: 60%" />
+      </colgroup>
+      <col span="2" style="background-color: darkgoldenrod" />
+      <thead>
+        <tr>
+          <!--giving same name for 2 columns-->
+          <th colspan="2">hotel name and num</th>
+          <th>addresses</th>
+          <th class="highlo">ambassador</th>
+          <th class="highlo">cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="height: 100px">
+          <td>myravati hotel</td>
+          <td>9945622345</td>
+          <td>srinagar</td>
+          <td>amir khan</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>swarna hotel</td>
+          <td>8009767789</td>
+          <td>jammu</td>
+          <td>sharukh</td>
+          <td style="text-align: right; vertical-align: bottom">10000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>sum</td>
+          <td>18000</td>
+        </tr>
+      </tfoot>
+    </table>
+    <a href="../index.html">click for home page</a>
+  </body>
+</html>
