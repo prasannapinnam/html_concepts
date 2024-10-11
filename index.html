@@ -1,0 +1,34 @@
+<!--saying to search engine that this is a HTML page-->
+<!DOCTYPE html>
+<!--telling search engine that we use english-->
+<html lang="en">
+  <head>
+    <!-- this title appears on above address bar-->
+    <title>my first web page</title>
+    <style>
+      /* below img css class styles all images in index.html*/
+      img {
+        width: 100px;
+        border-radius: 10px;
+        /*float left means image will be left of text written*/
+        float: left;
+        margin-right: 100px;
+      }
+
+      /*only p modfies all p tags;so we used class called username for specific p tag modification */
+      p.username {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/imagesmall.jpg" alt="image of prasanna" />
+    <p class="username">iam prasanna</p>
+    <p><strong>ceo</strong> of <em>swastik</em> &lt;group&gt;</p>
+    <!--linking my html page to new.html-->
+    <a href="codes/new.html">click to know about italy</a><br />
+    <!---target=_blank means google will be opened in new tab , but not in the same tab where we click-->
+    <a href="https://google.com" target="_blank">click to open google</a><br />
+    <a href="codes/tables.html">click for hotels details</a>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+  </head>
+  <body>
+    <!--action attribute defines the action to be performed when the form is submitted-->
+    <!-- action contains form handler-->
+    <!--form handler generally is a path of a php file in server that processes the input we give-->
+    <!--The target attribute specifies where to 
+        display the response that is received after submitting the form; _blank means newtab-->
+    <!--div often used as a container for other HTML elements thats all, often used to style a group of elements-->
+    <div style="background-color: coral">
+      <form action="../index.html" target="_blank" form="form1">
+        <fieldset>
+          <legend>personalia</legend>
+          <!--fieldset element:groups related data in a form-->
+          <!--legend element: defines a caption for the fieldset element.-->
+
+          <label for="who">who:</label> <br />
+          <input type="text" id="who" name="who" value="iam" readonly /><br />
+
+          <!--label's for and input's id should be equal-->
+          <!--If the name attribute is omitted, the value of the input field we enter 
+            or prementioned will not be sent at all to server so that it can be processed-->
+          <!-- value attribute specifies an initial value for an input field-->
+          <!-- readonly: if we use this user cant modify that data-->
+
+          Firstname:
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            size="50"
+            minlength="4"
+          /><br />
+          password:<input type="password" id="pwd" name="pwd" /> <br />
+          <!-- min and max attributes adds restrictions to date-->
+          birthday:<input
+            type="date"
+            id="bday"
+            name="bday"
+            min="1998-07-13"
+            max="2021-12-12"
+          /><br />
+          <!-- autocomplete allows the browser to predict the value. When a user starts to type in a field-->
+          mailid:
+          <input type="email" id="mail" name="mail" autocomplete="on" /><br />
+          <!--multiple allows more than 1 input to be entered eg:mails,files etc..-->
+          resume upload:
+          <input type="file" id="resume" name="resume" multiple /><br />
+          <!--hidden type's input is not visible to user-->
+          <!--hidden type lets web developers include data that cannot be 
+            seen/modified by users when a form is submitted; but dont use this coz users can see this using DEV tools-->
+          <input type="hidden" id="custid" name="custid" value="4356" />
+
+          <!-- observe here we used same name coz we need only one radio to be ticked-->
+          <input type="radio" name="select_fav_lang" id="HTML" value="HTML" />
+          <label for="HTML">HTML</label><br />
+          <input type="radio" name="select_fav_lang" id="CSS" value="CSS" />
+          <label class="padclass" for="CSS">CSS</label><br />
+          <!--here we can check 1 or more or none coz we have different names-->
+          <input type="checkbox" name="vehicle 1" id="car" value="car" />
+          <label for="car">I have a car</label><br />
+          <input type="checkbox" name="vehicle2" id="bike" value="bike" />
+          <label for="bike">i have a bike</label><br />
+        </fieldset>
+
+        <!--select is for dropdown box-->
+        <!--- size means num of displayed items-->
+        <!--multiple allows us to select more than 1 value-->
+        choose a car:<select id="cars" name="cars" size="2" multiple>
+          <option value="volvo">volvo</option>
+          <option value="BMW">BMW</option>
+          <option value="mitsubishi">mitsubishi</option>
+          <option value="ferrari">ferrari</option>
+        </select>
+        ><br />
+        <!--rows:visible number of lines in a text area;
+            cols:specifies the visible width of a text area.-->
+        write opinion:<textarea
+          name="feedback"
+          id="feedback"
+          cols="20"
+          rows="5"
+        ></textarea>
+        <br />
+
+        <!--datalist specifies a list of pre-defined options for an input element, we can type items other than in list also-->
+        choose a breakfast:<input list="itemsmenu" />
+        <datalist id="itemsmenu">
+          <option value="poori"></option>
+          <option value="dosa"></option>
+          <option value="chapathi"></option>
+          <option value="vada"></option>
+          <option value="manchuria"></option>
+          <option value="appadam"></option>
+          <option value="sambar"></option>
+          <option value="pappu"></option>
+        </datalist>
+        <br />
+
+        <!--in website see use of step attribute used, next value is a increment of 3-->
+        num of items reqd:<input
+          type="number"
+          id="numofitems"
+          name="noofitems"
+          value="0"
+          min="0"
+          max="50"
+          step="3"
+        /><br />
+        b/w 0-10 :<input
+          type="range"
+          id="quantity"
+          name="quantity"
+          min="0"
+          max="10"
+        /><br />
+        <p>tel format:123-45-678</p>
+        <!-- required attrbute ----means that box has to filled to submit form-->
+        telephone num:<input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          placeholder="123-45-678"
+          required
+        /><br />
+
+        <!--using clickable image as submit button-->
+        <!-- see buttons dont need name attribute-->
+        <input
+          type="image"
+          src="../images/coffee.jpg"
+          alt="Submit"
+          width="48"
+          height="48"
+        />
+        <input type="submit" value="submitoo" />
+        <!-- resets all inputs to default value-->
+        <input type="reset" />
+      </form>
+      <!--here input is outside formtag but is still associated with the form via form attribute; form1 is id of form-->
+      <input type="button" value="OK" onclick="alert('hello')" form="form1" />
+      <!--an inline element can be used inside a block element-->
+      <!--span element is an inline container used to modify a part of a text, or a part of a document.-->
+      <p>
+        My mother has
+        <span style="color: blue; font-weight: bold">blue</span> eyes and my
+        father has
+        <span style="color: darkolivegreen; font-weight: bold">dark green</span>
+        eyes.
+      </p>
+    </div>
+  </body>
+</html>

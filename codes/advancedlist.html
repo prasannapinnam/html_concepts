@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar with list</title>
+    <style>
+        ul{
+            list-style-type: none;  /*bullets will be removed*/
+            /*without overflow background clr is not working*/
+            overflow: hidden;
+           /* https://www.w3schools.com/css/css_overflow.asp  check this link for overflow*/
+            background-color: cornflowerblue;
+        }
+        li{
+          float: left;
+        }
+        li a{
+        
+            padding: 20px;
+            text-decoration: none; /*removes underline*/
+        }
+        li a:hover {background-color: lightcoral;}
+    </style>
+</head>
+<!--a nav bar using list-->
+<body>
+    <ul>
+        <li><a href="../index.html">home</li>
+        <li><a href="#rsrcs">resources</li>
+        <li><a href ="#videos">videos</li>
+        <li><a href="#mocks"> mocks</li>
+    </ul>
+    
+</body>
+</html>
